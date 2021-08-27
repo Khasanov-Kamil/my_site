@@ -443,27 +443,31 @@ body {
   .title {
     height: 100vh;
     justify-content: left;
+    background-position: left center
   }
- .text__name{
+  .text__name{
    font-size: 70px
  }
-.btn__aboutMe{
-  font-size: 36px;
+  .btn__aboutMe{
+  font-size: 27px;
 }
-.text__whoAmI{
-  font-size: 36px
+  .text__whoAmI{
+  font-size: 27px
 }
- .nav__btn{
+  .nav__btn{
    display: none
  }
- .nav__menu{
+  .nav__menu{
     max-height: 500px
   }
- .nav__burger-menu{
+  .nav__burger-menu{
     flex-direction: inherit;
  }
   .nav__burger-menu a {
     margin: 0 20px
+  }
+  .about__text,.services__text,.contact__text{
+    font-size: 20px
   }
 }
 

@@ -438,7 +438,7 @@ body {
 /*Средние девайсы («таблетки», >= 768px) */
 @media (min-width: 768px) {
   .title__block{
-    padding: 0 37px
+    padding: 0 50px
   }
   .title {
     height: 100vh;
@@ -447,6 +447,12 @@ body {
  .text__name{
    font-size: 70px
  }
+.btn__aboutMe{
+  font-size: 36px;
+}
+.text__whoAmI{
+  font-size: 36px
+}
  .nav__btn{
    display: none
  }

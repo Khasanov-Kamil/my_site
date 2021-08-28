@@ -487,7 +487,8 @@ body {
   .about__text,
   .services__text,
   .contact__text {
-    font-size: 20px
+    font-size: 20px;
+    line-height: 120%;
   }
 
   .skills__container {
@@ -535,7 +536,8 @@ body {
   .about__text,
   .services__text,
   .contact__text {
-    font-size: 37px
+    font-size: 26px;
+    line-height: 120%
   }
 
 }

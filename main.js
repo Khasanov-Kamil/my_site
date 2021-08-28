@@ -1,10 +1,57 @@
 let btnBurgerMenu = document.querySelector('.nav__btn');
 btnBurgerMenu.addEventListener('click', activeBurgerMenu);
-
+let linkBurgerMenu = document.querySelectorAll('.burger-menu__links')
+let about = document.querySelector('.about'), 
+    services = document.querySelector('.services'),
+    skills = document.querySelector('.skills'),
+    contact = document.querySelector('.contact');
+let btnAboutme = document.querySelector('.btn__aboutMe')
 function activeBurgerMenu() {
   document.querySelector('.nav__menu').classList.toggle('nav__menu-active')
   btnBurgerMenu.classList.toggle('nav__btn-active')
 }
+function scrollTo(element){
+  window.scroll({
+    left:0, 
+    top: element.offsetTop,
+    behavior: 'smooth'
+  })
+}
+function btnAboutmeTo(){
+  scrollTo(about)
+}
+function addEvLink(){
+  if (this.classList.contains('l1')) {
+    scrollTo(about)
+  } else if(this.classList.contains('l2')){
+    scrollTo(services)
+  } else if (this.classList.contains('l3')) {
+    scrollTo(skills)
+  } else if (this.classList.contains('l4')) {
+    scrollTo(contact)
+  }
+    
+}
+for (var i = 0; i < linkBurgerMenu.length; i++) {
+  linkBurgerMenu[i].addEventListener('click', addEvLink)
+}
+btnAboutme.addEventListener('click', btnAboutmeTo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //============ Chart skilss =============

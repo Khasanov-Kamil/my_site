@@ -522,7 +522,9 @@ body {
   .nav__menu {
     border: none
   }
-
+  .services__item{
+    flex: 1 0 33.33%
+  }
   .nav {
     flex-direction: initial;
   }
@@ -530,8 +532,17 @@ body {
     margin: 0 auto;
     width: 700px
   }
+  .about__text,
+  .services__text,
+  .contact__text {
+    font-size: 37px
+  }
 
 }
 
 /* Экстрабольшие девайсы (большие десктопы, >= 1200px) */
-@media (min-width: 1200px) {}
+@media (min-width: 1400px) {
+  .container{
+    width: 900px
+  }
+}

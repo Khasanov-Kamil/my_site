@@ -129,7 +129,7 @@ body {
 
 .text__name {
   font-size: 37px;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   color: #FFFFFF;
   margin-bottom: 15px;
@@ -146,9 +146,15 @@ body {
   display: flex;
   justify-content: center;
 }
+.btn__aboutMe:hover{
+  background-color: #A7A7A773;
+  outline: none;
+  transition: 0.3s ease;
+}
 
 .btn__aboutMe {
   background-color: transparent;
+  overflow: hidden;
   color: #C2C2C2;
   border: 1px solid #C2C2C2;
   border-radius: 5px;
@@ -222,7 +228,7 @@ body {
   max-height: 0px;
   border-top: 1px solid #434343;
   background-color: #282940;
-  transition: 0.3s ease-in-out;
+  transition: max-height 0.3s ease;
 }
 
 .nav__burger-menu {
@@ -236,6 +242,9 @@ body {
   color: #D4D4D4;
   margin-bottom: 20px;
   transition: 0.2s ease;
+}
+.nav__burger-menu p:last-child{
+  margin-bottom: 0
 }
 
 .nav__burger-menu p:hover {
@@ -291,9 +300,9 @@ body {
 
 .about__text,
 .contact__text {
-  margin: 23px 0;
-  line-height: 22px;
-  color: #696B7E
+  margin: 12px 0;
+  line-height: 140%;
+  color: #696B7E;
 }
 
 .services {
@@ -488,7 +497,7 @@ body {
   .services__text,
   .contact__text {
     font-size: 20px;
-    line-height: 120%;
+    line-height: 140%;
   }
 
   .skills__container {
@@ -522,9 +531,6 @@ body {
 
   .nav__menu {
     border: none
-  }
-  .skills__item{
-    flex: 1 0 33.33%
   }
   .nav {
     flex-direction: initial;

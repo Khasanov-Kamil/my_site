@@ -102,7 +102,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #2C2C2C;
-  opacity: 0.6;
+  opacity: 0.7;
   position: absolute;
 }
 
@@ -292,10 +292,13 @@ body {
   margin-bottom: 50px;
 
 }
-
-.about__img img {
+.about__img{
   width: 190px;
-  border-radius: 50%
+  height: 190px;
+  border-radius: 50%;
+  background: url("img/profil2.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 
 .about__text,

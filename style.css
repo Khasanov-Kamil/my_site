@@ -278,20 +278,22 @@ html{
   align-items: center
 }
 
-.about__title,
+/* .about__title,
 .services__title,
 .skills__title,
-.contact__title {
+.contact__title */ 
+.title-text{
   font-size: 30px;
   font-weight: 600;
   color: #2B2B2B;
   margin: 25px 0 20px 0
 }
 
-.about__line,
+/* .about__line,
 .services__line,
 .skills__line,
-.contact__line {
+.contact__line  */
+.line{
   width: 80px;
   height: 4px;
   background-color: #E17535;
@@ -301,6 +303,7 @@ html{
 .about__img{
   width: 190px;
   height: 190px;
+  margin-bottom: 13px;
   border-radius: 50%;
   background: url("img/profil2.jpg");
   background-size: cover;
@@ -453,8 +456,43 @@ html{
   color: #E6E6E6;
   margin: 10px;
 }
-
-
+.card{
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease, max-height 0.5s ease;
+  max-height: 0;
+}
+.card_active{
+  transform: scale(1);
+  max-height: 100px
+}
+.card__title{
+  background-color: #CAFFC9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__title,
+.card__info{
+  padding: 8px
+}
+.card__title-text{
+  color: #5E7C5D;
+}
+.card__closed{
+  font-size: 20px;
+  color: #327F30;
+  padding: 2px
+}    
+.card__info{
+ background-color: #DEFFDE;
+}  
+.card__info-text{
+  color: #759B74
+} 
 
 
 

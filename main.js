@@ -1,11 +1,23 @@
 let btnBurgerMenu = document.querySelector('.nav__btn');
 btnBurgerMenu.addEventListener('click', activeBurgerMenu);
-let linkBurgerMenu = document.querySelectorAll('.burger-menu__links')
-let about = document.querySelector('.about'), 
+let linkBurgerMenu = document.querySelectorAll('.burger-menu__links'), 
+    about = document.querySelector('.about'), 
     services = document.querySelector('.services'),
     skills = document.querySelector('.skills'),
-    contact = document.querySelector('.contact');
-let btnAboutme = document.querySelector('.btn__aboutMe')
+    contact = document.querySelector('.contact'),
+    btnAboutme = document.querySelector('.btn__aboutMe'), 
+    nav = document.querySelector('.nav'), 
+    card = document.querySelector('.card'), 
+    Dost = false;
+document.querySelector('.about__img').addEventListener('click', () => {
+  if (!Dost) {
+    card.classList.add('card_active');
+    Dost = true;
+  }
+document.querySelector('.card__closed').addEventListener('click', () => {
+  card.classList.remove('card_active')
+})
+}) 
 function activeBurgerMenu() {
   document.querySelector('.nav__menu').classList.toggle('nav__menu-active')
   btnBurgerMenu.classList.toggle('nav__btn-active')
@@ -13,7 +25,7 @@ function activeBurgerMenu() {
 function scrollTo(element){
   window.scroll({
     left:0, 
-    top: element.offsetTop,
+    top: element.offsetTop - nav.offsetHeight,
     behavior: 'smooth'
   })
 }
@@ -21,6 +33,8 @@ function btnAboutmeTo(){
   scrollTo(about)
 }
 function addEvLink(){
+  document.querySelector('.nav__menu').classList.toggle('nav__menu-active')
+  btnBurgerMenu.classList.toggle('nav__btn-active')
   if (this.classList.contains('l1')) {
     scrollTo(about)
   } else if(this.classList.contains('l2')){

@@ -92,6 +92,9 @@ h6 {
 body {
   font-family: "Roboto", sans-serif
 }
+html{
+  height: auto
+}
 
 .header {
   width: 100%;
@@ -163,7 +166,10 @@ body {
 
 .nav {
   width: 100%;
+  position: -webkit-sticky; /* Safari */  
+  position: sticky;
   top: 0;
+  z-index: 50;
   display: flex;
   flex-direction: column;
 }
@@ -502,6 +508,9 @@ body {
     font-size: 20px;
     line-height: 140%;
   }
+  .services__text{
+    text-align: center
+  }
 
   .skills__container {
     flex-direction: initial;
@@ -531,7 +540,6 @@ body {
   .nav__inner {
     padding: 20px;
   }
-
   .nav__menu {
     border: none
   }

@@ -267,6 +267,7 @@ html {
 .nav__burger-menu p {
   color: #D4D4D4;
   margin-bottom: 20px;
+  cursor: pointer;
   transition: 0.2s ease;
 }
 

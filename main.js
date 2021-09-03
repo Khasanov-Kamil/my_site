@@ -5,6 +5,7 @@ let linkBurgerMenu = document.querySelectorAll('.burger-menu__links'),
     services = document.querySelector('.services'),
     skills = document.querySelector('.skills'),
     contact = document.querySelector('.contact'),
+    work = document.querySelector('.work'),
     btnAboutme = document.querySelector('.btn__aboutMe'), 
     nav = document.querySelector('.nav'), 
     card = document.querySelector('.card'), 
@@ -43,6 +44,8 @@ function addEvLink(){
     scrollTo(skills)
   } else if (this.classList.contains('l4')) {
     scrollTo(contact)
+  } else if (this.classList.contains('l5')) {
+    scrollTo(work)
   }
     
 }

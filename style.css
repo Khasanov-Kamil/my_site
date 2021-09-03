@@ -539,8 +539,8 @@ html {
 }
 
 .work__img {
-  width: 200px;
-  min-height: 150px;
+  width: 100%;
+  border-radius:4px;
   transition: all 0.3s ease
 }
 .work__img:hover{
@@ -553,7 +553,7 @@ html {
 }
 .work__button{
   margin-top: 10px;
-  padding: 5px 10px;
+  padding: 9px 20px;
   background: transparent;
   border: 1.5px solid #E4E4E4;
   border-radius: 3px;
@@ -577,10 +577,18 @@ html {
 
 /*Средние девайсы («таблетки», >= 768px) */
 @media (min-width: 768px) {
-.work__img {
-  width: 50%;
-  min-height: 150px;
-}
+  .work__img{
+    width: 50%;
+  }
+  .work__subtitle{
+    font-size: 23px;
+  }
+  .work__button{
+    padding: 12px 23px
+  }
+  .work__button a{
+    font-size: 23px;
+  }
   .title__block {
     padding: 0 50px
   }

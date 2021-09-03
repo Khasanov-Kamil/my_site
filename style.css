@@ -89,10 +89,28 @@ h6 {
 }
 
 /*--------------------*/
-body {
-  font-family: "Roboto", sans-serif
+.ibg {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
 }
-html{
+
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: white
+}
+
+html {
   height: auto
 }
 
@@ -149,7 +167,8 @@ html{
   display: flex;
   justify-content: center;
 }
-.btn__aboutMe:hover{
+
+.btn__aboutMe:hover {
   background-color: #A7A7A773;
   outline: none;
   transition: 0.3s ease;
@@ -166,7 +185,8 @@ html{
 
 .nav {
   width: 100%;
-  position: -webkit-sticky; /* Safari */  
+  position: -webkit-sticky;
+  /* Safari */
   position: sticky;
   top: 0;
   z-index: 50;
@@ -249,7 +269,8 @@ html{
   margin-bottom: 20px;
   transition: 0.2s ease;
 }
-.nav__burger-menu p:last-child{
+
+.nav__burger-menu p:last-child {
   margin-bottom: 0
 }
 
@@ -271,7 +292,8 @@ html{
 .services__inner,
 .skills__inner,
 .contact__inner,
-.footer__inner {
+.footer__inner,
+.work__inner {
   padding: 23px;
   display: flex;
   flex-direction: column;
@@ -281,8 +303,8 @@ html{
 /* .about__title,
 .services__title,
 .skills__title,
-.contact__title */ 
-.title-text{
+.contact__title */
+.title-text {
   font-size: 30px;
   font-weight: 600;
   color: #2B2B2B;
@@ -293,14 +315,15 @@ html{
 .services__line,
 .skills__line,
 .contact__line  */
-.line{
+.line {
   width: 80px;
   height: 4px;
   background-color: #E17535;
   margin-bottom: 50px;
 
 }
-.about__img{
+
+.about__img {
   width: 190px;
   height: 190px;
   margin-bottom: 13px;
@@ -456,7 +479,8 @@ html{
   color: #E6E6E6;
   margin: 10px;
 }
-.card{
+
+.card {
   font-size: 13px;
   font-weight: 500;
   border-radius: 6px;
@@ -465,34 +489,85 @@ html{
   transition: transform 0.3s ease, max-height 0.5s ease;
   max-height: 0;
 }
-.card_active{
+
+.card_active {
   transform: scale(1);
   max-height: 100px
 }
-.card__title{
+
+.card__title {
   background-color: #CAFFC9;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .card__title,
-.card__info{
+.card__info {
   padding: 8px
 }
-.card__title-text{
+
+.card__title-text {
   color: #5E7C5D;
 }
-.card__closed{
+
+.card__closed {
   font-size: 20px;
   color: #327F30;
   padding: 2px
-}    
-.card__info{
- background-color: #DEFFDE;
-}  
-.card__info-text{
+}
+
+.card__info {
+  background-color: #DEFFDE;
+}
+
+.card__info-text {
   color: #759B74
-} 
+}
+.work{
+  border-bottom: 1px solid #C8C8C8
+}
+.work__row{
+  width: 100%;
+}
+.work__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.work__img {
+  width: 200px;
+  min-height: 150px;
+  transition: all 0.3s ease
+}
+.work__img:hover{
+  transform: scale(1.2)
+}
+.work__subtitle{
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 10px
+}
+.work__button{
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: transparent;
+  border: 1.5px solid #E4E4E4;
+  border-radius: 3px;
+  transition: all 0.3s ease
+}
+.work__button a{
+  font-size: 17px;
+  color: #2C2C2C;
+  font-weight: 500;
+}
+.work__button:hover{
+  background-color:#D6D6D6;
+  border-color: #B7B7B7
+  
+}
 
 
 
@@ -501,6 +576,10 @@ html{
 
 /*Средние девайсы («таблетки», >= 768px) */
 @media (min-width: 768px) {
+.work__img {
+  width: 50%;
+  min-height: 150px;
+}
   .title__block {
     padding: 0 50px
   }
@@ -545,7 +624,8 @@ html{
     font-size: 20px;
     line-height: 140%;
   }
-  .services__text{
+
+  .services__text {
     text-align: center;
   }
 
@@ -569,14 +649,16 @@ html{
     flex: 1 0 50%;
     padding: 12px
   }
-  .contact__main{
+
+  .contact__main {
     display: flex;
     justify-content: center
   }
-  .contact__main a{
+
+  .contact__main a {
     margin: 17px
   }
-  
+
 
 }
 
@@ -585,16 +667,20 @@ html{
   .nav__inner {
     padding: 20px;
   }
+
   .nav__menu {
     border: none
   }
+
   .nav {
     flex-direction: initial;
   }
-  .container{
+
+  .container {
     margin: 0 auto;
     width: 700px
   }
+
   .about__text,
   .services__text,
   .contact__text {
@@ -606,7 +692,7 @@ html{
 
 /* Экстрабольшие девайсы (большие десктопы, >= 1200px) */
 @media (min-width: 1400px) {
-  .container{
+  .container {
     width: 900px
   }
 }

@@ -47,7 +47,6 @@ function addEvLink(){
   } else if (this.classList.contains('l5')) {
     scrollTo(work)
   }
-    
 }
 for (var i = 0; i < linkBurgerMenu.length; i++) {
   linkBurgerMenu[i].addEventListener('click', addEvLink)

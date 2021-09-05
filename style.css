@@ -530,12 +530,14 @@ html {
 }
 .work__row{
   width: 100%;
+  text-align: center;
 }
 .work__item {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 40px;
 }
 
 .work__img {
@@ -547,7 +549,7 @@ html {
   transform: scale(1.2)
 }
 .work__subtitle{
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 600;
   margin-bottom: 10px
 }
@@ -579,6 +581,13 @@ html {
 @media (min-width: 768px) {
   .work__img{
     width: 50%;
+  }
+  .work__row{
+    display: flex;
+  }
+  .work__item{
+    width: 50%;
+    margin: 0 17px
   }
   .work__subtitle{
     font-size: 23px;
